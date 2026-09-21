@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using System.Text.Json.Serialization;
 
 namespace NationalArchives.FindCaseLaw.Utils;
@@ -21,8 +20,9 @@ public readonly record struct Court()
     [JsonPropertyName("ncn_examples")] public string[] NcnExamples { get; init; } = [];
     [JsonPropertyName("param")] public string? Param { get; init; }
     [JsonPropertyName("start_year")] public int? StartYear { get; init; }
-    [JsonPropertyName("selectable")] public bool? Selectable { get; init; }
-    [JsonPropertyName("listable")] public bool? Listable { get; init; }
+    [JsonPropertyName("show_in_search_filters")] public bool? ShowInSearchFilters { get; init; }
+    [JsonPropertyName("show_in_public_directory")] public bool? ShowInPublicDirectory { get; init; }
+    [JsonPropertyName("show_to_editors")] public bool? ShowToEditors { get; init; }
     [JsonPropertyName("identifier_iri")] public required string IdentifierIri { get; init; }
     [JsonPropertyName("grouped_name")] public string? GroupedName { get; init; }
     [JsonPropertyName("extra_params")] public string[] ExtraParams { get; init; } = [];
